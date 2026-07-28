@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Add Study Session</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      th:href="@{/css/add-session.css}">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center mb-4">
+            Add Study Session
+        </h2>
+
+        <form th:action="@{/study/save}"
+              th:object="${studySession}"
+              method="post">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Subject
+                </label>
+
+                <input type="text"
+                       class="form-control"
+                       th:field="*{subject}"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Study Hours
+                </label>
+
+                <input type="number"
+                       step="0.5"
+                       class="form-control"
+                       th:field="*{hours}"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Productivity (%)
+                </label>
+
+                <input type="number"
+                       class="form-control"
+                       th:field="*{productivity}"
+                       min="1"
+                       max="100"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Study Date
+                </label>
+
+                <input type="date"
+                       class="form-control"
+                       th:field="*{studyDate}"
+                       required>
+
+            </div>
+
+            <button class="btn btn-primary w-100">
+
+                Save Study Session
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

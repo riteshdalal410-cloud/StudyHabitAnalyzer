@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | AI Study Habit Analyzer</title>
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="login-card">
+
+    <div class="logo">
+        🤖
+    </div>
+
+    <h1>AI Study Habit Analyzer</h1>
+
+    <p class="subtitle">
+        Welcome Back! Login to Continue
+    </p>
+
+    <form th:action="@{/login}" method="post">
+
+        <div class="input-group">
+            <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+        </div>
+
+        <div class="input-group">
+            <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required>
+        </div>
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+    <div class="bottom-text">
+
+        Don't have an account?
+
+        <a th:href="@{/register}">
+            Create Account
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+console.log("AI Study Habit Analyzer Loaded Successfully");

@@ -1,0 +1,19 @@
+body{
+    background:#f5f7fb;
+    font-family:Poppins,sans-serif;
+}
+
+.card{
+    max-width:600px;
+    margin:auto;
+    border:none;
+    border-radius:15px;
+}
+
+h2{
+    font-weight:600;
+}
+
+.btn{
+    padding:12px;
+}
